@@ -93,7 +93,14 @@ function buildCharts(sample) {
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       hovermode:'closest',
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      plot_bgcolor: "khaki",
+      paper_bgcolor: "cadetblue",
+      font: {
+        family: "Courier New",
+        size: 12,
+        color: "khaki"
+      }
     };
 
     // 10. Use Plotly to plot the data with the layout. 
@@ -114,7 +121,14 @@ function buildCharts(sample) {
       hovermode:'closest',
       title: "Bacteria Cultures Per Sample",
       xaxis: {title: "OTU ID"},
-      height: 500
+      height: 520,
+      plot_bgcolor: "khaki",
+      paper_bgcolor: "cadetblue",
+      font: {
+        family: "Courier New",
+        size: 12,
+        color: "khaki"
+      }
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -134,7 +148,6 @@ function buildCharts(sample) {
     
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
-      domain: {},
       value: wfreq,
       type: "indicator",
 		  mode: "gauge+number",
@@ -145,14 +158,21 @@ function buildCharts(sample) {
           { range: [0, 2], color: "red" },
           { range: [2, 4], color: "orange" },
           { range: [4, 6], color: "yellow" },
-          { range: [6, 8], color: "lightgreen" },
+          { range: [6, 8], color: "yellowgreen" },
           { range: [8, 10], color: "green" }],
-        bar: { color: "black" }}
+        bar: { color: "black" }},  
     }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      title: "Belly Button Washing Frequency"
+      title: "Belly Button Washing Frequency",
+      plot_bgcolor: "khaki",
+      paper_bgcolor: "cadetblue",
+      font: {
+        family: "Courier New",
+        size: 12,
+        color: "khaki"
+      }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
